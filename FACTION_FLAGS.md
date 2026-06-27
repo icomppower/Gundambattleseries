@@ -75,6 +75,53 @@ painters['titans'] = (ctx, w, h) => {
 };
 ```
 
+### Karaba
+```js
+painters['karaba'] = (ctx, w, h) => {
+	ctx.fillStyle = '#6b6e4a';
+	ctx.fillRect(0, 0, w, h);
+	ctx.fillStyle = '#e6e6cc';
+	const cx = w/2, cy = h/2;
+	// left swept wing
+	ctx.beginPath();
+	ctx.moveTo(cx, cy - h*0.09);
+	ctx.lineTo(cx - w*0.41, cy + h*0.17);
+	ctx.lineTo(cx - w*0.35, cy + h*0.30);
+	ctx.lineTo(cx, cy + h*0.03);
+	ctx.closePath(); ctx.fill();
+	// right swept wing
+	ctx.beginPath();
+	ctx.moveTo(cx, cy - h*0.09);
+	ctx.lineTo(cx + w*0.41, cy + h*0.17);
+	ctx.lineTo(cx + w*0.35, cy + h*0.30);
+	ctx.lineTo(cx, cy + h*0.03);
+	ctx.closePath(); ctx.fill();
+	// nose disc
+	ctx.beginPath(); ctx.arc(cx, cy - h*0.10, h*0.07, 0, Math.PI*2); ctx.fill();
+};
+```
+
+### Federation Assembly (efgov — non-combatant)
+```js
+painters['efgov'] = (ctx, w, h) => {
+	ctx.fillStyle = '#5a6b7a';
+	ctx.fillRect(0, 0, w, h);
+	const cx = w/2, cy = h/2;
+	ctx.strokeStyle = '#d4c050';
+	ctx.lineWidth = w*0.08;
+	ctx.beginPath(); ctx.arc(cx, cy, h*0.37, 0, Math.PI*2); ctx.stroke();
+	ctx.lineWidth = w*0.04;
+	ctx.beginPath(); ctx.arc(cx, cy, h*0.27, 0, Math.PI*2); ctx.stroke();
+	ctx.fillStyle = '#d4c050';
+	ctx.beginPath();
+	ctx.moveTo(cx, cy - h*0.10);
+	ctx.lineTo(cx + h*0.07, cy);
+	ctx.lineTo(cx, cy + h*0.10);
+	ctx.lineTo(cx - h*0.07, cy);
+	ctx.closePath(); ctx.fill();
+};
+```
+
 ---
 
 ## SEED / Destiny — CE 71/73

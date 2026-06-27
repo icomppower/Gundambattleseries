@@ -11,6 +11,7 @@ Self-playing 3D documentary battle maps built on [`keithligh/cinematic-3d-battle
 | # | Battle | Series | Real Location | Status | Repo | Live |
 |---|--------|--------|---------------|--------|------|------|
 | 01 | Operation Odessa | U.C. 0079 | Odessa, Ukraine | 🟡 Building | [gundam0079odessa](https://github.com/icomppower/gundam0079odessa) | gundam0079odessa.vercel.app |
+| 02 | The Day of Dakar | Z Gundam (U.C. 0087) | Dakar, Senegal | 🟡 Building | [Zgundamdakar](https://github.com/icomppower/Zgundamdakar) | icomppower.github.io/Zgundamdakar |
 
 > Add a row here every time a new project is deployed.
 
