@@ -11,12 +11,24 @@
 
 ---
 
-## READ FIRST (in this order)
+## READ FIRST — run these curl commands before writing any code
 
-1. `icomppower/Gundambattleseries` — README.md, ENGINE_NOTES.md, FACTION_FLAGS.md
-2. `keithligh/cinematic-3d-battle-engine` — PLAYBOOK.md, AGENTS.md, data.example.js
-3. `keithligh/battle-of-jaburo-0079` — data.js, flags.js (closest Gundam reference fork)
-4. `icomppower/[SLUG]` — existing files (may be empty; check before writing)
+```bash
+curl -s https://raw.githubusercontent.com/icomppower/Gundambattleseries/main/ENGINE_NOTES.md
+curl -s https://raw.githubusercontent.com/icomppower/Gundambattleseries/main/FACTION_FLAGS.md
+curl -s https://raw.githubusercontent.com/icomppower/Gundambattleseries/main/KNOWN_ISSUES.md
+curl -s https://raw.githubusercontent.com/keithligh/cinematic-3d-battle-engine/main/PLAYBOOK.md
+curl -s https://raw.githubusercontent.com/keithligh/cinematic-3d-battle-engine/main/AGENTS.md
+curl -s https://raw.githubusercontent.com/keithligh/cinematic-3d-battle-engine/main/data.example.js
+curl -s https://raw.githubusercontent.com/keithligh/battle-of-jaburo-0079/main/data.js
+curl -s https://raw.githubusercontent.com/keithligh/battle-of-jaburo-0079/main/flags.js
+curl -s https://raw.githubusercontent.com/icomppower/[SLUG]/main/data.js
+curl -s https://raw.githubusercontent.com/icomppower/[SLUG]/main/flags.js
+curl -s https://raw.githubusercontent.com/icomppower/[SLUG]/main/index.html
+```
+
+Use `raw.githubusercontent.com` only — `api.github.com` rate-limits on shared IPs.
+Read ENGINE_NOTES.md + KNOWN_ISSUES.md fully before writing any code.
 
 ---
 
@@ -54,7 +66,7 @@ Run `node tools/check-agnostic.mjs` after every edit to confirm clean.
 
 ## STEPS (Opus — initial scaffold)
 
-1. Clone `icomppower/[SLUG]`
+1. Fetch all READ FIRST files above (run the curl commands) — do this before anything else. Then clone `icomppower/[SLUG]`.
 2. Copy `MASTER_TEMPLATE/` files → fill all `[VARIABLE]` placeholders
 3. Write `data.js` — units, hotspots, [N shots] shots
 4. Write `flags.js` — painters for [FACTION_A_ID] and [FACTION_B_ID]

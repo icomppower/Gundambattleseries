@@ -150,27 +150,24 @@ Framework preset: **Static HTML** (no framework, output dir `.`, no build comman
 
 ## Creator Credit (required on every project)
 
-Add to `index.html <head>`:
+The engine `index.html` has two built-in credit elements. Update **both** in every fork — different content in each:
+
+**1 · `#title .credit` (upper-left panel) — engine credit only:**
 ```html
-<!-- Creator credit — required on every project -->
-<meta name="author" content="Johnny — https://linkedin.com/in/icomppower/">
+<div class="credit"><a href="https://github.com/keithligh/cinematic-3d-battle-engine" target="_blank" rel="noopener">cinematic-3d-battle-engine</a> by Keith Li (MIT)</div>
 ```
 
-Add to `index.html` before `</body>`:
+**2 · `#credit` (bottom footer) — series creator:**
 ```html
-<div id="creator-credit" style="position:fixed;bottom:10px;left:12px;font-size:11px;
-  color:rgba(255,255,255,0.5);font-family:sans-serif;z-index:999;pointer-events:none;">
-  <a href="https://linkedin.com/in/icomppower/" target="_blank"
-     style="color:rgba(255,255,255,0.5);text-decoration:none;">icomppower</a>
-</div>
+<div id="credit" lang="en">Built by <a href="https://www.linkedin.com/in/icomppower/" target="_blank" rel="noopener">Johnny Lai</a></div>
 ```
 
-The engine's `index.html` also has two hardcoded credit elements that must be updated in every fork:
+**Also add to `<head>`:**
+```html
+<meta name="author" content="Johnny Lai — https://www.linkedin.com/in/icomppower/">
+```
 
-- `#title .credit` div (inside top-left panel): change to `<a href="https://linkedin.com/in/icomppower/" ...>icomppower</a> · Engine: <a ...>cinematic-3d-battle-engine</a> by Keith Li`
-- `#credit` div (bottom bar, `lang="en"`): same reordering
-
-**Both default to "Built with cinematic-3d-battle-engine by Keith Li" — update both or icomppower credit will not appear.**
+Do **not** add a separate `div id="creator-credit"` fixed div — the engine `#credit` bar is sufficient.
 
 ---
 
