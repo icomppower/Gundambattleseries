@@ -165,7 +165,12 @@ Add to `index.html` before `</body>`:
 </div>
 ```
 
-This is **required** — add to every project during STEP 3. Subtle fixed credit, bottom-left corner, visible on the live site.
+The engine's `index.html` also has two hardcoded credit elements that must be updated in every fork:
+
+- `#title .credit` div (inside top-left panel): change to `<a href="https://linkedin.com/in/icomppower/" ...>icomppower</a> · Engine: <a ...>cinematic-3d-battle-engine</a> by Keith Li`
+- `#credit` div (bottom bar, `lang="en"`): same reordering
+
+**Both default to "Built with cinematic-3d-battle-engine by Keith Li" — update both or icomppower credit will not appear.**
 
 ---
 
