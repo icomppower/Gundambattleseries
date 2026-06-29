@@ -33,3 +33,4 @@ Cross-project lessons learned. Read this before building to avoid repeating know
 - Vercel framework preset: **Static HTML** (no framework, output dir `.`, no build command)
 - Commit tiles + music into repo before `vercel --prod`
 - The engine's default `.gitignore` excludes `lib/tiles/` — remove that line in every fork before committing tiles; Vercel 404s if tiles aren't in the repo
+- Always use `vercel --prod --force` for this project — incremental deploys (without `--force`) only upload changed files; Vercel does not carry forward unchanged files from prior deployments and the site goes fully 404
