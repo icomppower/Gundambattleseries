@@ -166,3 +166,56 @@ Add to `index.html` before `</body>`:
 ```
 
 This is **required** — add to every project during STEP 3. Subtle fixed credit, bottom-left corner, visible on the live site.
+
+---
+
+## Timeline scrubber (optional — index.html only, no engine edit)
+
+Lets viewers jump between shots. `Director.goToShot(i)` already exists in the engine.
+
+Add to `index.html` before `</body>`:
+
+```html
+<input id="timeline" type="range" min="0" max="9" step="1" value="0"
+  style="position:fixed;bottom:38px;left:50%;transform:translateX(-50%);
+         width:220px;opacity:0.55;z-index:999;accent-color:#ffd700;">
+<script>
+  document.getElementById('timeline').addEventListener('input', e => {
+    if(window.Director) window.Director.goToShot(+e.target.value);
+  });
+  const _t = document.getElementById('timeline');
+  setInterval(() => { if(window.Director) _t.value = Math.max(0, window.Director.i); }, 500);
+</script>
+```
+
+Set `max` to N−1 (shots minus 1). Omit if you prefer pure self-playing mode.
+
+---
+
+## Custom FX specs (data.js only — no engine edit)
+
+Declare new particle effects in `data.js` via `meta.fx[name]`.
+
+```js
+meta: {
+  fx: {
+    'beam_saber': {
+      onFire: {
+        flash: { y:8, color:0x00ffff, intensity:[400,600] },
+        emit: [{ sys:'glow', n:6, pos:[{},{b:4},{}],
+                 vel:[{j:[-8,8]},{j:[6,14]},{j:[-8,8]}],
+                 size:[8,16], life:[0.2,0.4], color:[[0,0.9,1],[0,0.7,0.9]] }]
+      },
+      cadence: { range:[0.8,1.4] }
+    },
+    'capture': {
+      continuous: [{ sys:'glow', prob:0.4,
+        pos:[{j:[-2,2]},{j:[0,6]},{j:[-2,2]}],
+        vel:[{j:[-1,1]},{b:3},{j:[-1,1]}],
+        size:[6,10], life:[0.6,1.0], color:[[0.9,0.8,0.2],[1,1,0.4]] }]
+    }
+  }
+}
+```
+
+Reference in hotspots: `{ a:2, b:2.5, kind:'beam_saber', lng:30.72, lat:46.48, i:0.9 }`
