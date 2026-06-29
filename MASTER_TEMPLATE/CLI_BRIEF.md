@@ -105,7 +105,7 @@ Run `node tools/check-agnostic.mjs` after every edit to confirm clean.
 npm i -g vercel
 vercel login
 vercel          # preview
-vercel --prod   # → [SLUG].vercel.app
+vercel --prod --force   # → [SLUG].vercel.app  (--force required: incremental deploys drop tiles)
 ```
 
 Framework preset: **Static HTML** — no framework, output dir `.`, no build command.
