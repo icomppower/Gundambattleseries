@@ -59,6 +59,7 @@ Run `node tools/check-agnostic.mjs` after every edit to confirm clean.
 3. Write `data.js` — units, hotspots, [N shots] shots
 4. Write `flags.js` — painters for [FACTION_A_ID] and [FACTION_B_ID]
 5. Patch `index.html <head>` — title, canon-confidence chip CSS, `<audio>` commented out
+   - Add creator credit meta tag and fixed footer div (see ENGINE_NOTES.md — Creator Credit section)
 6. `node tools/fetch_tiles.mjs --dry` → then fetch tiles → commit into `lib/tiles`
 7. `node tools/validate.mjs` → must pass clean
 8. `node tools/check-agnostic.mjs` → must pass clean

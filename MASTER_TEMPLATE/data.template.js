@@ -2,6 +2,12 @@
 // Fill every [VARIABLE] before running validate.mjs
 // Model: keithligh/battle-of-jaburo-0079/data.js
 
+/**
+ * Series: Narrated History Map Documentary
+ * Creator: Johnny — https://linkedin.com/in/icomppower/
+ * Engine: keithligh/cinematic-3d-battle-engine (MIT)
+ */
+
 export const meta = {
   title:    '[BATTLE_NAME]',          // e.g. "Operation Odessa"
   title_zh: '[BATTLE_NAME_ZH]',       // e.g. "奧德薩行動"
