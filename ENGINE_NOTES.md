@@ -1,7 +1,8 @@
 # Engine Notes — cinematic-3d-battle-engine
 
 > Battle-agnostic facts about the engine. Never edit engine modules.
-> Source of truth: `keithligh/cinematic-3d-battle-engine` PLAYBOOK.md + AGENTS.md
+> Engine base: `keithligh/cinematic-3d-battle-engine` (MIT, used unmodified per fork contract)
+> Series: icomppower/Gundambattleseries — read this file before building any project
 
 ---
 
@@ -144,3 +145,24 @@ vercel --prod   # → [slug].vercel.app
 ```
 
 Framework preset: **Static HTML** (no framework, output dir `.`, no build command). Commit tiles + music before deploying.
+
+---
+
+## Creator Credit (required on every project)
+
+Add to `index.html <head>`:
+```html
+<!-- Creator credit — required on every project -->
+<meta name="author" content="Johnny — https://linkedin.com/in/icomppower/">
+```
+
+Add to `index.html` before `</body>`:
+```html
+<div id="creator-credit" style="position:fixed;bottom:10px;left:12px;font-size:11px;
+  color:rgba(255,255,255,0.5);font-family:sans-serif;z-index:999;pointer-events:none;">
+  <a href="https://linkedin.com/in/icomppower/" target="_blank"
+     style="color:rgba(255,255,255,0.5);text-decoration:none;">icomppower</a>
+</div>
+```
+
+This is **required** — add to every project during STEP 3. Subtle fixed credit, bottom-left corner, visible on the live site.

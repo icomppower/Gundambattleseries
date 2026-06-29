@@ -1,8 +1,8 @@
 # Gundam Battle Map Series
+**by Johnny · [icomppower](https://linkedin.com/in/icomppower/)**
 
-Self-playing 3D documentary battle maps built on [`keithligh/cinematic-3d-battle-engine`](https://github.com/keithligh/cinematic-3d-battle-engine) (Three.js, real Earth terrain).
-
-**Non-commercial fan tribute.** All Gundam IP © their respective rights holders (Sotsu, Sunrise, Bandai Namco). Only this project's own writing is CC BY 4.0.
+Self-playing 3D documentary battle maps rendered on real Earth terrain.
+Each entry is a cinematic, sourced reconstruction of a Gundam battle — narrated, bilingual, self-directing.
 
 ---
 
@@ -50,3 +50,10 @@ Vercel (vercel --prod → [slug].vercel.app)
 - Gundam reference fork: `keithligh/battle-of-jaburo-0079`
 - Real-war reference fork: `icomppower/kyiv2022-3d`
 - HK 1941 reference fork: `icomppower/battle-of-hong-kong-1941`
+
+---
+
+## Credits
+- **Series creator:** Johnny — [linkedin.com/in/icomppower](https://linkedin.com/in/icomppower/)
+- **Engine:** cinematic-3d-battle-engine by Keith Li (MIT) — used as base, not modified
+- **Imagery:** Sentinel-2 © EOX IT Services GmbH · **Terrain:** AWS Terrarium / SRTM © USGS
